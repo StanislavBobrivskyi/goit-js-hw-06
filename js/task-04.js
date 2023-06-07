@@ -7,9 +7,11 @@ const decrementButton = document.querySelector('[data-action="decrement"]');
 incrementButton.addEventListener("click", () => {
   counterValue += 1;
   value.textContent = counterValue;
+  value.style.color = "green";
 });
 
 decrementButton.addEventListener("click", () => {
   counterValue -= 1;
   value.textContent = counterValue;
+  value.style.color = "red";
 });
