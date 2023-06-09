@@ -8,7 +8,16 @@ function onInput() {
 
   if (inputLength === length) {
     inputEl.classList.add("valid");
+    inputEl.classList.remove("ivalid");
   } else {
     inputEl.classList.add("invalid");
+    inputEl.classList.remove("valid");
   }
+}
+
+inputEl.addEventListener("focus", checkInput);
+
+function checkInput() {
+  inputEl.classList.remove("valid");
+  inputEl.classList.remove("invalid");
 }
